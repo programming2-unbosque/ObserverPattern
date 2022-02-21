@@ -21,12 +21,12 @@ public class Subject {
     }
 
     // Method used by subscribers when they want to subscribe to receive new states
-    public void attach(Observer observer){
+    public void attach(Observer observer) {
         observers.add(observer);
     }
 
     // Notification occurs for all subscribers currently attached
-    public void notifyAllObservers(){
+    public void notifyAllObservers() {
         for (Observer observer : observers) {
             observer.update();
         }

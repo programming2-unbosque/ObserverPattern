@@ -2,9 +2,9 @@ package co.edu.unbosque.observerpattern.subscriber;
 
 import co.edu.unbosque.observerpattern.publisher.Subject;
 
-public class BinaryObserver extends Observer{
+public class BinaryObserver extends Observer {
 
-    public BinaryObserver(Subject subject){
+    public BinaryObserver(Subject subject) {
         this.subject = subject;
         this.subject.attach(this);
     }

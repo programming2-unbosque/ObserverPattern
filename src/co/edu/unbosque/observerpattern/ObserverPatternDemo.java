@@ -5,6 +5,8 @@ import co.edu.unbosque.observerpattern.subscriber.BinaryObserver;
 import co.edu.unbosque.observerpattern.subscriber.HexaObserver;
 import co.edu.unbosque.observerpattern.subscriber.OctalObserver;
 
+import java.util.Scanner;
+
 public class ObserverPatternDemo {
 
     public static void main(String[] args) {
@@ -16,13 +18,13 @@ public class ObserverPatternDemo {
         new OctalObserver(subject);
         new BinaryObserver(subject);
 
-        // Publishing a first message
-        System.out.println("First state change: 15");
-        subject.setState(15);
-
-        // Publishing a second message
-        System.out.println("Second state change: 10");
-        subject.setState(10);
+        // Reading from user input
+        Scanner scan = new Scanner(System.in);
+        while (true) {
+            System.out.println("Enter the number to be transformed:");
+            Integer number = scan.nextInt();
+            subject.setState(number);
+            System.out.println();
+        }
     }
-
 }

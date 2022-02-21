@@ -2,9 +2,9 @@ package co.edu.unbosque.observerpattern.subscriber;
 
 import co.edu.unbosque.observerpattern.publisher.Subject;
 
-public class HexaObserver extends Observer{
+public class HexaObserver extends Observer {
 
-    public HexaObserver(Subject subject){
+    public HexaObserver(Subject subject) {
         this.subject = subject;
         this.subject.attach(this);
     }
